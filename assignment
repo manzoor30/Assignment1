@@ -1,0 +1,42 @@
+START PROGRAM
+
+Prompt user: "How many pizzas would you like?"
+Read user input: num_pizzas
+
+If num_pizzas is 0:
+    Display "No pizzas selected. Thank you for visiting."
+    END PROGRAM
+
+For each pizza in range(num_pizzas):
+    Prompt user: "What type of pizza would you like?"
+    Read user input: pizza_type
+
+    If pizza_type is "Thin crust":
+        Make pizza with thin crust
+    Else:
+        Continue to topping selection
+
+    Prompt user: "Select crust type: Thin crust or Normal"
+    Read user input: crust_type
+
+    If crust_type is "Thin crust":
+        Make thin crust
+    Else:
+        Continue to topping selection
+
+    Prompt user: "Select toppings: Chicken, Cheese"
+    Read user input: toppings
+
+    If toppings is "Chicken":
+        Continue to process
+    Else if toppings is "Cheese":
+        Prompt user: "Would you like to order a drink with that? (yes/no)"
+        Read user input: drink_option
+
+        If drink_option is "yes":
+            Continue to process
+        Else:
+            Calculate total cost
+            Display order list and cost
+
+END PROGRAM
